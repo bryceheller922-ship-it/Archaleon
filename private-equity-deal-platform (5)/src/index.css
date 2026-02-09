@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --font-cinzel: 'Cinzel', serif;
+  --font-cormorant: 'Cormorant Garamond', serif;
+  --font-inter: 'Inter', sans-serif;
+  
+  --color-gold-50: #fdf8e8;
+  --color-gold-100: #f5eabc;
+  --color-gold-200: #e8d48a;
+  --color-gold-300: #d4b85c;
+  --color-gold-400: #c4a23a;
+  --color-gold-500: #a88a2a;
+  --color-gold-600: #8a7020;
+  
+  --color-luxury-50: #f0fdf4;
+  --color-luxury-100: #dcfce7;
+  --color-luxury-200: #bbf7d0;
+  --color-luxury-300: #86efac;
+  --color-luxury-400: #4ade80;
+  --color-luxury-500: #22c55e;
+  --color-luxury-600: #16a34a;
+  --color-luxury-700: #15803d;
+  --color-luxury-800: #166534;
+  --color-luxury-900: #14532d;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(34, 197, 94, 0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 197, 94, 0.4);
+}
+
+/* Smooth animations */
+* {
+  scroll-behavior: smooth;
+}
+
+/* Line clamp utility */
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #0a0a0a;
+}
+
+/* Roman heading styles */
+.font-roman {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.05em;
+}
+
+.font-serif-body {
+  font-family: 'Cormorant Garamond', serif;
+}
+
+/* Luxury green glow effect */
+.glow-green {
+  box-shadow: 0 0 30px rgba(34, 197, 94, 0.15), 0 0 60px rgba(34, 197, 94, 0.05);
+}
+
+.glow-green-sm {
+  box-shadow: 0 0 15px rgba(34, 197, 94, 0.1);
+}
+
+/* Gold accent */
+.text-gold {
+  color: #c4a23a;
+}
+
+.border-gold {
+  border-color: rgba(196, 162, 58, 0.3);
+}
+
+/* Subtle grain texture overlay */
+.grain-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+}
+
+select option {
+  background: #1a1a1a;
+  color: #e5e5e5;
+}
+
+/* Animation for toast notifications */
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slide-in 0.3s ease-out;
+}
